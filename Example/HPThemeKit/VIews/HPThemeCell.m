@@ -7,6 +7,7 @@
 //
 
 #import "HPThemeCell.h"
+#import "UIImageView+WebCache.h"
 
 @implementation HPThemeCell
 
@@ -19,7 +20,7 @@
 
 -(void)setTheme:(HPThemeModel *)theme{
     _theme = theme;
-    //[self.themeImage sd_setImageWithURL:theme.themeImgUrl];
+    [self.themeImage sd_setImageWithURL:theme.themeImgUrl];
     self.themeTitle.text= theme.themeName;
 }
 
