@@ -12,7 +12,7 @@ PODS:
     - DKNightVersion/Core
   - DKNightVersion/UIKit (2.4.3):
     - DKNightVersion/Core
-  - HPThemeKit (0.1.0):
+  - HPThemeKit (0.0.2):
     - DKNightVersion
     - SSZipArchive
   - SDWebImage (4.4.4):
@@ -36,7 +36,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   DKNightVersion: eaa80cc4014b4bae7d4b535fd87ecc6a3c2767b3
-  HPThemeKit: fe0c16b22e5c8f3bd5711afc9f1a5e2b99a8209c
+  HPThemeKit: d791ba6d62ae99487bd82ffb12cf5a09f2518e84
   SDWebImage: c00ec18ab25d10e5ffac109b0f78d1b4341c9691
   SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
 

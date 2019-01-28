@@ -222,9 +222,9 @@
 				BFB4809F21FE9B74003DF07B /* HPHomeController.m */,
 				BFB4809921FE9B74003DF07B /* HPCardsController.m */,
 				BFB4809A21FE9B74003DF07B /* HPThemeController.h */,
+				BFB4809D21FE9B74003DF07B /* HPThemeController.m */,
 				BFB4809B21FE9B74003DF07B /* HPUserController.m */,
 				BFB4809C21FE9B74003DF07B /* HPNewsController.m */,
-				BFB4809D21FE9B74003DF07B /* HPThemeController.m */,
 				BFB4809E21FE9B74003DF07B /* HPCardsController.h */,
 				BFB480A021FE9B74003DF07B /* HPNewsController.h */,
 				BFB480A121FE9B74003DF07B /* HPUserController.h */,
@@ -547,7 +547,6 @@
 			baseConfigurationReference = F1159007B1DBA5CEDEF87524 /* Pods-HPThemeKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HPThemeKit/HPThemeKit-Prefix.pch";
 				INFOPLIST_FILE = "HPThemeKit/HPThemeKit-Info.plist";
@@ -563,7 +562,6 @@
 			baseConfigurationReference = B1D52941EEB1756FB364DCDD /* Pods-HPThemeKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HPThemeKit/HPThemeKit-Prefix.pch";
 				INFOPLIST_FILE = "HPThemeKit/HPThemeKit-Info.plist";

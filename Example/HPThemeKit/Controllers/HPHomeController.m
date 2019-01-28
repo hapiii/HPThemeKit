@@ -10,6 +10,7 @@
 #import "HPThemeManager.h"
 #import "DKNightVersion.h"
 #import "HPColorTable.h"
+
 @interface HPHomeController ()
 
 @end
@@ -18,10 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self configTabBarItem];
     self.view.dk_backgroundColorPicker = HPColorPickerWithKey(kTableMenuTextColorSelected);
 }
-
+- (void)configTabBarItem
+{
+    self.tabBarItem.title = @"课程";
+    self.tabBarItem.dk_imagePicker = HPImagePickerWithKey(tab_buddy_nor);
+    self.tabBarItem.dk_selectedImagePicker = HPImagePickerWithKey(tab_buddy_press);
+    [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -2.5)];
+    self.tabBarItem.imageInsets = UIEdgeInsetsMake(-18.0, 0, 0.5, 0);
+}
 /*
 #pragma mark - Navigation
 

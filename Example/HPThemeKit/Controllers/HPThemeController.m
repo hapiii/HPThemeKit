@@ -29,6 +29,7 @@
     [self loadData];
 }
 -(void)configUI{
+    
     [self.view addSubview:self.ThemeCollectionView];
     self.view.dk_backgroundColorPicker = HPColorPickerWithKey(kContentKeywordTextColor);
 
@@ -55,9 +56,8 @@
     
 }
 -(void)jsonValue:(NSData*)data{
-    NSString*str=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     
-    //寻找{位置
+    NSString*str=[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     NSRange range=[str rangeOfString:@"{"];
     str=[str substringWithRange:NSMakeRange(range.location, str.length-range.location)];
     
@@ -71,7 +71,6 @@
     //遍历所有的value,剔除掉损坏的无法使用的主题
     
    
-   
     [self.datas removeAllObjects];
     
     for (NSDictionary*tempDic in array) {
@@ -83,8 +82,6 @@
             [self.datas addObject:model];
         }
     }
- 
-    
 }
 
 #pragma mark===delegate

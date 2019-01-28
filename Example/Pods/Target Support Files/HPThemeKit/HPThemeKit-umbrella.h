@@ -18,6 +18,7 @@
 #import "HPThemeModel.h"
 #import "HttpDownLoad.h"
 #import "NSFileManager+HPAdd.h"
+#import "UITabBarItem+Night.h"
 
 FOUNDATION_EXPORT double HPThemeKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char HPThemeKitVersionString[];

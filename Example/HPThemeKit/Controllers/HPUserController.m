@@ -35,6 +35,16 @@
     img2.dk_imagePicker = HPImagePickerWithKey(chat_bottom_red_pack_press@3x);
     [self.view addSubview:img2];
     
+    [self configTabBarItem];
+    // Do any additional setup after loading the view.
+}
+- (void)configTabBarItem
+{
+    self.tabBarItem.title = @"课程";
+    self.tabBarItem.dk_imagePicker = HPImagePickerWithKey(tab_recent_nor);
+    self.tabBarItem.dk_selectedImagePicker = HPImagePickerWithKey(tab_recent_press);
+    [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -2.5)];
+    self.tabBarItem.imageInsets = UIEdgeInsetsMake(-18.0, 0, 0.5, 0);
 }
 -(void)goToTheme{
     HPThemeController *themeVC = [[HPThemeController alloc] init];
