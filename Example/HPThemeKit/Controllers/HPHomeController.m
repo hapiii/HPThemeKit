@@ -19,16 +19,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self configTabBarItem];
+   // [self configTabBarItem];
     self.view.dk_backgroundColorPicker = HPColorPickerWithKey(kTableMenuTextColorSelected);
 }
 - (void)configTabBarItem
 {
     self.tabBarItem.title = @"课程";
-    self.tabBarItem.dk_imagePicker = HPImagePickerWithKey(tab_buddy_nor);
+    //HPImagePickerWithKey(tab_buddy_nor)
+    self.tabBarItem.dk_imagePicker = [HPImage imgPickerWithKey:@"tab_buddy_nor"];
+    self.iv.dk_imagePicker = HPImagePickerWithKey(tab_buddy_press);
+    
     self.tabBarItem.dk_selectedImagePicker = HPImagePickerWithKey(tab_buddy_press);
-    [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -2.5)];
-    self.tabBarItem.imageInsets = UIEdgeInsetsMake(-18.0, 0, 0.5, 0);
+    
+    
 }
 /*
 #pragma mark - Navigation

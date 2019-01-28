@@ -11,7 +11,7 @@
 
 typedef UIImage *(^HPImagePicker)(DKThemeVersion *themeVersion);
 
-#define HPImagePickerWithKey(key) [HPImage pickerWithKey:@#key]
+#define HPImagePickerWithKey(key) [HPImage imgPickerWithKey:@#key]
 
 
 
@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HPImage : NSObject
 
-+ (DKImagePicker)pickerWithKey:(NSString *)key;
++ (DKImagePicker)imgPickerWithKey:(NSString *)key;
 @end
 
 NS_ASSUME_NONNULL_END

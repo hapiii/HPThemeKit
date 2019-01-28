@@ -12,7 +12,7 @@
 
 @implementation HPImage
 
-+ (DKImagePicker)pickerWithKey:(NSString *)key {
++ (DKImagePicker)imgPickerWithKey:(NSString *)key {
     HPColorTable *colorTable = [HPColorTable sharedColorTable];
     NSParameterAssert(colorTable.imagesFilePath);
     
@@ -24,7 +24,8 @@
         //沙盒
         UIImage *img = [UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/%@",colorTable.imagesFilePath,key]];
         if (img) {
-            return img;
+            //不渲染原图
+            return [img imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         }else{
             CGRect rect=CGRectMake(0.0f, 0.0f,1,1);
             UIGraphicsBeginImageContext(rect.size);

@@ -17,8 +17,17 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    [self.view addSubview:self.iv];
    
     // Do any additional setup after loading the view.
+}
+
+-(UIImageView *)iv{
+    if (_iv==nil) {
+        _iv = [[UIImageView alloc] initWithFrame:CGRectMake(100, 300, 200, 200)];
+        
+    }
+    return _iv;
 }
 
 /*

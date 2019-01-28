@@ -7,6 +7,7 @@
 //
 
 #import "HPAppDelegate.h"
+#import "HPTabbarController.h"
 
 @implementation HPAppDelegate
 
@@ -14,8 +15,11 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor]; //给window设置一个背景色
+    HPTabbarController *vc = [[HPTabbarController alloc] init];
+    self.window.rootViewController = vc;
+    self.window.rootViewController.view.alpha = 1.0;
     [self.window makeKeyAndVisible];
-    [self setupTabsController];
+    //[self setupTabsController];
     // Override point for customization after application launch.
     return YES;
 }

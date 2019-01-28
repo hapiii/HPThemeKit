@@ -32,15 +32,18 @@
     
     UIImageView *img2 = [[UIImageView alloc] initWithFrame:CGRectMake(100, floor(CGRectGetMaxY(img.frame)), 200, 200)];
     img2.dk_backgroundColorPicker = HPColorPickerWithKey(kSearchBarCancelButtonTitleColorNormal);
-    img2.dk_imagePicker = HPImagePickerWithKey(chat_bottom_red_pack_press@3x);
+    img2.dk_imagePicker = HPImagePickerWithKey(chat_bottom_red_pack_press);
     [self.view addSubview:img2];
     
-    [self configTabBarItem];
+   // [self configTabBarItem];
     // Do any additional setup after loading the view.
 }
+
 - (void)configTabBarItem
 {
     self.tabBarItem.title = @"课程";
+    
+    self.iv.dk_imagePicker = HPImagePickerWithKey(tab_recent_nor);
     self.tabBarItem.dk_imagePicker = HPImagePickerWithKey(tab_recent_nor);
     self.tabBarItem.dk_selectedImagePicker = HPImagePickerWithKey(tab_recent_press);
     [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -2.5)];
