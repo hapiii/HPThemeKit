@@ -47,7 +47,7 @@
     [self addChildViewController:home imageName:@"tab_buddy_nor" selectedImageName:@"tab_buddy_press" title:@"首页"];
     [self addChildViewController:market imageName:@"tab_qworld_nor" selectedImageName:@"tab_qworld_press" title:@"行情"];
     [self addChildViewController:trad imageName:@"tab_recent_nor" selectedImageName:@"tab_recent_press" title:@"交易"];
-    [self addChildViewController:order imageName:@"tab_recent_nor" selectedImageName:@"tab_recent_press" title:@"订单"];
+    [self addChildViewController:order imageName:@"tab_call_nor" selectedImageName:@"tab_call_press" title:@"订单"];
     
     
     // this make tabBaController call
