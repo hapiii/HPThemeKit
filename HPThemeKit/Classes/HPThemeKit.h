@@ -16,7 +16,7 @@ FOUNDATION_EXPORT const unsigned char HPThemeKitVersionString[];
 #import <HPThemeKit/HPThemeModel.h>
 #import <HPThemeKit/HttpDownLoad.h>
 #import <HPThemeKit/HPThemeBundleHelper.h>
-
+#import <HPThemeKit/UITabBarItem+Night.h>
 
 #else
 
@@ -26,6 +26,6 @@ FOUNDATION_EXPORT const unsigned char HPThemeKitVersionString[];
 #import "HPThemeModel.h"
 #import "HttpDownLoad.h"
 #import "HPThemeBundleHelper.h"
-
+#import "UITabBarItem+Night.h"
 #endif
 

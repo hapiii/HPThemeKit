@@ -59,6 +59,29 @@ static HPThemeManager *manager=nil;
   }
     
 }
+///删除主题
+-(void)delegateTheme:(HPThemeModel *)theme Handle:(void(^)(downLoadStates state))result{
+    NSError *err = nil;
+    [[NSFileManager defaultManager] removeItemAtPath:theme.themeLocalPath error:&err];
+    if (err) {
+        //删除失败
+        result(DownLoadFail);
+        return;
+    }
+    [self.downLoadListArray removeObject:theme.themeName];
+    [self.downLoadListArray writeToFile:self.themePlistPath atomically:YES];
+}
+
+///删除全部主题
+-(void)delegateAllTheme{
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:ThemeFolderPath]){
+        NSError *err = nil;
+        [[NSFileManager defaultManager] removeItemAtPath:ThemeFolderPath error:&err];
+    }
+    
+    
+}
 
 ///切换主题
 -(void)changeTheme:(HPThemeModel *)theme{

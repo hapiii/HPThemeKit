@@ -30,7 +30,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(instancetype)shareManager;
 
+///下载某个主题
 -(void)downLoadThemeWithTheme:(HPThemeModel *)theme Handle:(void(^)(downLoadStates state))result;
+
+///删除某个主题
+-(void)delegateTheme:(HPThemeModel *)theme Handle:(void(^)(downLoadStates state))result;
+
+///删除全部主题
+-(void)delegateAllTheme;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -42,12 +42,8 @@
         }
         _mySession=[NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
         
-        
-        //对中文进行处理
         str=[str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
         
-        
-        //对请求地址进行拼接MD5加密,首先把字典转换为字符串,在与请求地址进行拼接
         NSString*dataDicStr=nil;
         if (dic) {
             dataDicStr=[[NSString alloc]initWithData:[NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
@@ -65,8 +61,7 @@
         //判断文件缓存是否有效
         NSFileManager*manager=[NSFileManager defaultManager];
         if ([manager fileWithPath:_cacheFileName TimeOut:60*60]) {
-            //文件可用
-            //读取文件
+           
             NSString*path=[NSString stringWithFormat:@"%@/Documents/%@",NSHomeDirectory(),_cacheFileName];
             
             NSData*cacheData=[NSData dataWithContentsOfFile:path];
@@ -83,10 +78,9 @@
             }
             
         }else{
-            //文件不可用,需要进行网络请求
-            //菊花转
+           
             [UIApplication sharedApplication].networkActivityIndicatorVisible=YES;
-            //开始进行请求
+           
             NSMutableURLRequest*request=[NSMutableURLRequest requestWithURL:[NSURL URLWithString:str]cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
             
            
@@ -95,10 +89,9 @@
                 
                 [request setHTTPBody:[dataDicStr dataUsingEncoding:NSUTF8StringEncoding]];
             }else{
-                //GET
-                //对数据参数进行拼接
+                
                 if (dic) {
-                    //取allkeys
+                
                     NSArray*allKeys=[dic allKeys];
                     NSMutableString*tempStr=[NSMutableString stringWithString:@"?"];
                     for (NSString*key in allKeys) {
@@ -118,40 +111,38 @@
                 
             }
             
+             __weak typeof(self) weakSelf = self;
             NSURLSessionDataTask*task=[_mySession dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
-                    
-                    
                     [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
                     
                     if (error) {
-                        
-                        if ([_delegate respondsToSelector:@selector(httpDownLoadFinishOrFail:target:)]) {
-                            [_delegate httpDownLoadFinishOrFail:NO target:self];
+                        if ([weakSelf.delegate respondsToSelector:@selector(httpDownLoadFinishOrFail:target:)]) {
+                            [weakSelf.delegate httpDownLoadFinishOrFail:NO target:self];
                         }
                         //进行block回调
-                        if (_myBlock) {
-                            self.myBlock(self,NO);
+                        if (weakSelf.myBlock) {
+                            weakSelf.myBlock(self,NO);
                         }
                         
                         
                     }else{
                         //进行数据解析
-                        [self jsonValue:data];
+                        [weakSelf jsonValue:data];
                         
-                        //保存数据
-                        NSString*path=[NSString stringWithFormat:@"%@/Documents/%@",NSHomeDirectory(),_cacheFileName];
+                        //缓存
+                        NSString*path=[NSString stringWithFormat:@"%@/Documents/%@",NSHomeDirectory(),weakSelf.cacheFileName];
                         
                         [data writeToFile:path atomically:YES];
                         
-                        if ([_delegate respondsToSelector:@selector(httpDownLoadFinishOrFail:target:)]) {
-                            [_delegate httpDownLoadFinishOrFail:YES target:self];
+                        if ([weakSelf.delegate respondsToSelector:@selector(httpDownLoadFinishOrFail:target:)]) {
+                            [weakSelf.delegate httpDownLoadFinishOrFail:YES target:self];
                         }
                         
-                        if (_myBlock) {
-                            self.myBlock(self,YES);
+                        if (weakSelf.myBlock) {
+                            weakSelf.myBlock(self,YES);
                         }
                         
                     }
@@ -159,10 +150,7 @@
                 });
                 
             }];
-            
-            //开始请求
             [task resume];
-            
         }
         
         
@@ -188,9 +176,9 @@
         }
         
     }
-    
-    
 }
+
+
 
 
 +(NSString *) md5: (NSString *) inPutText

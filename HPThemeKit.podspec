@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HPThemeKit'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = '主题切换小功能'
 
 # This description is used to generate tags and improve search results.
