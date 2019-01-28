@@ -1,0 +1,45 @@
+PODS:
+  - DKNightVersion (2.4.3):
+    - DKNightVersion/Core (= 2.4.3)
+    - DKNightVersion/CoreAnimation (= 2.4.3)
+    - DKNightVersion/UIKit (= 2.4.3)
+  - DKNightVersion/Core (2.4.3):
+    - DKNightVersion/Core/DeallocBlockExecutor (= 2.4.3)
+    - DKNightVersion/Core/extobjc (= 2.4.3)
+  - DKNightVersion/Core/DeallocBlockExecutor (2.4.3)
+  - DKNightVersion/Core/extobjc (2.4.3)
+  - DKNightVersion/CoreAnimation (2.4.3):
+    - DKNightVersion/Core
+  - DKNightVersion/UIKit (2.4.3):
+    - DKNightVersion/Core
+  - HPThemeKit (0.1.0):
+    - DKNightVersion
+    - SSZipArchive
+  - SDWebImage (4.4.4):
+    - SDWebImage/Core (= 4.4.4)
+  - SDWebImage/Core (4.4.4)
+  - SSZipArchive (2.1.4)
+
+DEPENDENCIES:
+  - HPThemeKit (from `../`)
+  - SDWebImage
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DKNightVersion
+    - SDWebImage
+    - SSZipArchive
+
+EXTERNAL SOURCES:
+  HPThemeKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DKNightVersion: eaa80cc4014b4bae7d4b535fd87ecc6a3c2767b3
+  HPThemeKit: fe0c16b22e5c8f3bd5711afc9f1a5e2b99a8209c
+  SDWebImage: c00ec18ab25d10e5ffac109b0f78d1b4341c9691
+  SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
+
+PODFILE CHECKSUM: 68b7cee4b2fc15c041c2a86f773152d33999b47a
+
+COCOAPODS: 1.5.3

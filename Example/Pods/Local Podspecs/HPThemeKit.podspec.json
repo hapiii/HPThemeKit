@@ -1,0 +1,30 @@
+{
+  "name": "HPThemeKit",
+  "version": "0.1.0",
+  "summary": "主题切换小功能",
+  "description": "基于DKNightVersion api为QQ主题",
+  "homepage": "https://github.com/hapiii/HPThemeKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "hapiii": "869932084@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/hapiii/HPThemeKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HPThemeKit/Classes/**/*",
+  "dependencies": {
+    "DKNightVersion": [
+
+    ],
+    "SSZipArchive": [
+
+    ]
+  }
+}

@@ -14,15 +14,21 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* HPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* HPAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* HPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* HPViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		BFB480A221FE9B74003DF07B /* HPCardsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4809921FE9B74003DF07B /* HPCardsController.m */; };
+		BFB480A321FE9B74003DF07B /* HPUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4809B21FE9B74003DF07B /* HPUserController.m */; };
+		BFB480A421FE9B74003DF07B /* HPNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4809C21FE9B74003DF07B /* HPNewsController.m */; };
+		BFB480A521FE9B74003DF07B /* HPThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4809D21FE9B74003DF07B /* HPThemeController.m */; };
+		BFB480A621FE9B74003DF07B /* HPHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4809F21FE9B74003DF07B /* HPHomeController.m */; };
+		BFB480A921FE9C30003DF07B /* HPBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB480A821FE9C30003DF07B /* HPBaseController.m */; };
+		BFB480AF21FE9FEE003DF07B /* HPThemeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB480AC21FE9FEE003DF07B /* HPThemeCell.m */; };
+		BFB480B021FE9FEE003DF07B /* HPThemeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFB480AE21FE9FEE003DF07B /* HPThemeCell.xib */; };
+		BFB480B521FEB3FC003DF07B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFB480B421FEB3FC003DF07B /* Launch Screen.storyboard */; };
 		F51976EF998FC562B28E2282 /* Pods_HPThemeKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71AEF1C5048344C95F3CD7B4 /* Pods_HPThemeKit_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3AFF8F764991A7382BB3C487 /* HPThemeKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = HPThemeKit.podspec; path = ../HPThemeKit.podspec; sourceTree = "<group>"; };
+		3AFF8F764991A7382BB3C487 /* HPThemeKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HPThemeKit.podspec; path = ../HPThemeKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4BB448D584CCEA2727FCE27D /* Pods-HPThemeKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPThemeKit_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPThemeKit_Tests/Pods-HPThemeKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* HPThemeKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HPThemeKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,8 +55,6 @@
 		6003F59B195388D20070C39A /* HPThemeKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HPThemeKit-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* HPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* HPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* HPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* HPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* HPThemeKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HPThemeKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -59,13 +63,27 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		68D70AD1985DD095345BCCCF /* Pods_HPThemeKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPThemeKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71AEF1C5048344C95F3CD7B4 /* Pods_HPThemeKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPThemeKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76FA3C8BA40B0F7668D1AA98 /* Pods-HPThemeKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPThemeKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HPThemeKit_Tests/Pods-HPThemeKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B1D52941EEB1756FB364DCDD /* Pods-HPThemeKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPThemeKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPThemeKit_Example/Pods-HPThemeKit_Example.release.xcconfig"; sourceTree = "<group>"; };
-		D43114B9E3254FBEC0DB78E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		DEA68B7760AB0A350A1C1EBE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BFB4809821FE9B74003DF07B /* HPHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPHomeController.h; sourceTree = "<group>"; };
+		BFB4809921FE9B74003DF07B /* HPCardsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPCardsController.m; sourceTree = "<group>"; };
+		BFB4809A21FE9B74003DF07B /* HPThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPThemeController.h; sourceTree = "<group>"; };
+		BFB4809B21FE9B74003DF07B /* HPUserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPUserController.m; sourceTree = "<group>"; };
+		BFB4809C21FE9B74003DF07B /* HPNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPNewsController.m; sourceTree = "<group>"; };
+		BFB4809D21FE9B74003DF07B /* HPThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPThemeController.m; sourceTree = "<group>"; };
+		BFB4809E21FE9B74003DF07B /* HPCardsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPCardsController.h; sourceTree = "<group>"; };
+		BFB4809F21FE9B74003DF07B /* HPHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPHomeController.m; sourceTree = "<group>"; };
+		BFB480A021FE9B74003DF07B /* HPNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPNewsController.h; sourceTree = "<group>"; };
+		BFB480A121FE9B74003DF07B /* HPUserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPUserController.h; sourceTree = "<group>"; };
+		BFB480A721FE9C30003DF07B /* HPBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPBaseController.h; sourceTree = "<group>"; };
+		BFB480A821FE9C30003DF07B /* HPBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPBaseController.m; sourceTree = "<group>"; };
+		BFB480AC21FE9FEE003DF07B /* HPThemeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPThemeCell.m; sourceTree = "<group>"; };
+		BFB480AD21FE9FEE003DF07B /* HPThemeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPThemeCell.h; sourceTree = "<group>"; };
+		BFB480AE21FE9FEE003DF07B /* HPThemeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HPThemeCell.xib; sourceTree = "<group>"; };
+		BFB480B421FEB3FC003DF07B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		D43114B9E3254FBEC0DB78E3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		DEA68B7760AB0A350A1C1EBE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F1159007B1DBA5CEDEF87524 /* Pods-HPThemeKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPThemeKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HPThemeKit_Example/Pods-HPThemeKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,10 +152,8 @@
 			children = (
 				6003F59C195388D20070C39A /* HPAppDelegate.h */,
 				6003F59D195388D20070C39A /* HPAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* HPViewController.h */,
-				6003F5A6195388D20070C39A /* HPViewController.m */,
-				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
+				BFB480AB21FE9FEE003DF07B /* VIews */,
+				BFB4809721FE9B74003DF07B /* Controllers */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -152,6 +168,7 @@
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
 				6003F59B195388D20070C39A /* HPThemeKit-Prefix.pch */,
+				BFB480B421FEB3FC003DF07B /* Launch Screen.storyboard */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -194,6 +211,35 @@
 				4BB448D584CCEA2727FCE27D /* Pods-HPThemeKit_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BFB4809721FE9B74003DF07B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFB480A721FE9C30003DF07B /* HPBaseController.h */,
+				BFB480A821FE9C30003DF07B /* HPBaseController.m */,
+				BFB4809821FE9B74003DF07B /* HPHomeController.h */,
+				BFB4809F21FE9B74003DF07B /* HPHomeController.m */,
+				BFB4809921FE9B74003DF07B /* HPCardsController.m */,
+				BFB4809A21FE9B74003DF07B /* HPThemeController.h */,
+				BFB4809B21FE9B74003DF07B /* HPUserController.m */,
+				BFB4809C21FE9B74003DF07B /* HPNewsController.m */,
+				BFB4809D21FE9B74003DF07B /* HPThemeController.m */,
+				BFB4809E21FE9B74003DF07B /* HPCardsController.h */,
+				BFB480A021FE9B74003DF07B /* HPNewsController.h */,
+				BFB480A121FE9B74003DF07B /* HPUserController.h */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BFB480AB21FE9FEE003DF07B /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				BFB480AC21FE9FEE003DF07B /* HPThemeCell.m */,
+				BFB480AD21FE9FEE003DF07B /* HPThemeCell.h */,
+				BFB480AE21FE9FEE003DF07B /* HPThemeCell.xib */,
+			);
+			path = VIews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,10 +322,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
-				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				BFB480B521FEB3FC003DF07B /* Launch Screen.storyboard in Resources */,
+				BFB480B021FE9FEE003DF07B /* HPThemeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,13 +393,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HPThemeKit_Example/Pods-HPThemeKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DKNightVersion/DKNightVersion.framework",
 				"${BUILT_PRODUCTS_DIR}/HPThemeKit/HPThemeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKNightVersion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPThemeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -367,9 +419,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB480A421FE9B74003DF07B /* HPNewsController.m in Sources */,
+				BFB480A521FE9B74003DF07B /* HPThemeController.m in Sources */,
+				BFB480A621FE9B74003DF07B /* HPHomeController.m in Sources */,
+				BFB480A321FE9B74003DF07B /* HPUserController.m in Sources */,
+				BFB480A921FE9C30003DF07B /* HPBaseController.m in Sources */,
+				BFB480AF21FE9FEE003DF07B /* HPThemeCell.m in Sources */,
 				6003F59E195388D20070C39A /* HPAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* HPViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				BFB480A221FE9B74003DF07B /* HPCardsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,14 +464,6 @@
 				6003F5B9195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				71719F9E1E33DC2100824A3D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -497,6 +547,7 @@
 			baseConfigurationReference = F1159007B1DBA5CEDEF87524 /* Pods-HPThemeKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HPThemeKit/HPThemeKit-Prefix.pch";
 				INFOPLIST_FILE = "HPThemeKit/HPThemeKit-Info.plist";
@@ -512,6 +563,7 @@
 			baseConfigurationReference = B1D52941EEB1756FB364DCDD /* Pods-HPThemeKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HPThemeKit/HPThemeKit-Prefix.pch";
 				INFOPLIST_FILE = "HPThemeKit/HPThemeKit-Info.plist";

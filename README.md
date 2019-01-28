@@ -1,9 +1,9 @@
 # HPThemeKit
 
 [![CI Status](https://img.shields.io/travis/hapiii/HPThemeKit.svg?style=flat)](https://travis-ci.org/hapiii/HPThemeKit)
-[![Version](https://img.shields.io/cocoapods/v/HPThemeKit.svg?style=flat)](https://cocoapods.org/pods/HPThemeKit)
-[![License](https://img.shields.io/cocoapods/l/HPThemeKit.svg?style=flat)](https://cocoapods.org/pods/HPThemeKit)
-[![Platform](https://img.shields.io/cocoapods/p/HPThemeKit.svg?style=flat)](https://cocoapods.org/pods/HPThemeKit)
+[![Version](https://img.shields.io/cocoapods/v0.0.2/HPThemeKit.svg?style=flat)](https://cocoapods.org/pods/HPThemeKit)
+[![License](https://img.shields.io/cocoapods/l0.0.2/HPThemeKit.svg?style=flat)](https://cocoapods.org/pods/HPThemeKit)
+[![Platform](https://img.shields.io/cocoapods/p0.0.2/HPThemeKit.svg?style=flat)](https://cocoapods.org/pods/HPThemeKit)
 
 ## Example
 

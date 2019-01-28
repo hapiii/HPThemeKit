@@ -12,9 +12,54 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor]; //给window设置一个背景色
+    [self.window makeKeyAndVisible];
+    [self setupTabsController];
     // Override point for customization after application launch.
     return YES;
 }
+- (void)setupTabsController
+{
+    UITabBarController *tabbarController = UITabBarController.new;
+    
+    
+    
+    
+    
+    //Tabbar初始化
+    NSArray *tabConfig;
+    
+    tabConfig = @[@{@"id": @(001), @"class": @"HPHomeController"},
+                  @{@"id": @(002), @"class": @"HPNewsController"},
+                  @{@"id": @(003), @"class": @"HPCardsController"},
+                  @{@"id": @(004), @"class": @"HPUserController"}];
+    
+    
+    NSMutableArray *tabControllers = [NSMutableArray arrayWithCapacity:0];
+    for (NSInteger i = 0; i < tabConfig.count; i++) {
+        NSDictionary *tabInfo = [tabConfig objectAtIndex:i];
+        //NSString *tabID = [tabInfo valueForKey:@"id"];
+        NSString *className = [tabInfo valueForKey:@"class"];
+        
+        UIViewController *tabController = [[NSClassFromString(className) alloc] init];
+        if (tabController) {
+            [tabControllers addObject:[[UINavigationController alloc] initWithRootViewController:tabController]];
+        }
+    }
+    
+    //tabbarController.delegate = self;
+    tabbarController.viewControllers = tabControllers;
+    
+    self.window.rootViewController = tabbarController;
+    self.window.rootViewController.view.alpha = 1.0;
+    [self.window makeKeyAndVisible];
+    
+    
+    tabbarController.selectedIndex = 0;
+    
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

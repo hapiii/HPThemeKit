@@ -1,0 +1,6 @@
+framework module HPThemeKit {
+  umbrella header "HPThemeKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

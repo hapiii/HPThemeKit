@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HPThemeKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of HPThemeKit.'
+  s.version          = '0.0.2'
+  s.summary          = '主题切换小功能'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+基于DKNightVersion思路和大部分源码实现的主题切换功能 api来自QQ主题
                        DESC
 
   s.homepage         = 'https://github.com/hapiii/HPThemeKit'
@@ -32,11 +32,13 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'HPThemeKit/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'HPThemeKit' => ['HPThemeKit/Assets/*.png']
-  # }
+  s.resource_bundles = {
+     'HPThemeKit' => ['HPThemeKit/Assets/*.{png,plist}','HPThemeKit/Assets/ThemeImage/*.{png,plist}']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+    s.dependency 'DKNightVersion'
+    s.dependency 'SSZipArchive'
+    
 end

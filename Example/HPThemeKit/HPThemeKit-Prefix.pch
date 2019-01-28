@@ -13,4 +13,12 @@
 #ifdef __OBJC__
     @import UIKit;
     @import Foundation;
+
+#import <DKNightVersion/DKNightVersion.h>
+#import <HPThemeKit/HPThemeKit.h>
+
+
+#define KScreenWidth [UIScreen mainScreen].bounds.size.width
+#define KScreenHeight [UIScreen mainScreen].bounds.size.height
+
 #endif
