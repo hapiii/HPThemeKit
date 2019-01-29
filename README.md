@@ -35,8 +35,7 @@ hapiii, 869932084@qq.com
 HPThemeKit is available under the MIT license. See the LICENSE file for more info.
 
 ## Effect
-
-![image](https://github.com/hapiii/HPThemeKit/blob/HPThemeKit/master/imgs/img1.gif)
+![image](https://github.com/hapiii/HPThemeKit/blob/master/imgs/img1.gif)
 
 #### 目前的问题：
 * 网络和下载部分做的比较糙，用AFN更好一点
