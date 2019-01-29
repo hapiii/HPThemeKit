@@ -36,7 +36,7 @@ HPThemeKit is available under the MIT license. See the LICENSE file for more inf
 
 ## Effect
 
- ![image](https://github.com/hapiii/HPThemeKit/blob/HPThemeKit/master/imgs/img1.gif)
+ ![image](https://github.com/hapiii/HPThemeKit/blob/master/imgs/img1.gif)
 
 ## Version description
 
