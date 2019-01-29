@@ -20,8 +20,10 @@
     [super viewDidLoad];
      self.view.dk_backgroundColorPicker = HPColorPickerWithKey(kTextFieldTextColor);
     
-    UIButton *but = [[UIButton alloc] initWithFrame:CGRectMake(100,100, 40, 40)];
-    but.backgroundColor = [UIColor redColor];
+    UIButton *but = [[UIButton alloc] initWithFrame:CGRectMake(100,100, 200, 40)];
+    [but setTitle:@"切换皮肤" forState:UIControlStateNormal];
+    [but dk_setBackgroundColorPicker:HPColorPickerWithKey(kTabBarItemTitleColorNormal)];
+    [but dk_setTitleColorPicker:HPColorPickerWithKey(kTableMenuTextColorSelected) forState:UIControlStateNormal];
     [self.view addSubview:but];
     [but addTarget:self action:@selector(goToTheme) forControlEvents:UIControlEventTouchUpInside];
    
@@ -35,20 +37,15 @@
     img2.dk_imagePicker = HPImagePickerWithKey(chat_bottom_red_pack_press);
     [self.view addSubview:img2];
     
-   // [self configTabBarItem];
-    // Do any additional setup after loading the view.
+    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(100, floor(CGRectGetMaxY(img2.frame)), 200, 50)];
+    lab.dk_tintColorPicker = HPColorPickerWithKey(kTableMenuTextColorSelected);
+    lab.dk_textColorPicker = HPColorPickerWithKey(kCommonBlueButtonTitleColorHighlighted);
+    lab.text = @"煮鱼不加香菜";
+    [self.view addSubview:lab];
+  
 }
 
-- (void)configTabBarItem
-{
-    self.tabBarItem.title = @"课程";
-    
-    self.iv.dk_imagePicker = HPImagePickerWithKey(tab_recent_nor);
-    self.tabBarItem.dk_imagePicker = HPImagePickerWithKey(tab_recent_nor);
-    self.tabBarItem.dk_selectedImagePicker = HPImagePickerWithKey(tab_recent_press);
-    [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -2.5)];
-    self.tabBarItem.imageInsets = UIEdgeInsetsMake(-18.0, 0, 0.5, 0);
-}
+
 -(void)goToTheme{
     HPThemeController *themeVC = [[HPThemeController alloc] init];
     themeVC.hidesBottomBarWhenPushed = YES;

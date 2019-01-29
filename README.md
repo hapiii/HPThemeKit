@@ -36,7 +36,13 @@ HPThemeKit is available under the MIT license. See the LICENSE file for more inf
 
 ## Effect
 
- ![image](https://github.com/hapiii/HPThemeKit/blob/HPThemeKit/master/imgs/img1.gif)
+![image](https://github.com/hapiii/HPThemeKit/blob/HPThemeKit/master/imgs/img1.gif)
+
+#### 目前的问题：
+* 网络和下载部分做的比较糙，用AFN更好一点
+* 类扩展不全一些用到的可能需要再添加
+* 不支持富文本
+
 
 ## Version description
 
