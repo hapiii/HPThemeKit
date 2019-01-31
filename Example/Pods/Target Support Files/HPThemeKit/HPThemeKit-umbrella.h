@@ -11,6 +11,7 @@
 #endif
 
 #import "HPThemeKit.h"
+#import "HPAttributedString.h"
 #import "HPColorTable.h"
 #import "HPImage.h"
 #import "HPThemeBundleHelper.h"
@@ -18,6 +19,7 @@
 #import "HPThemeModel.h"
 #import "HttpDownLoad.h"
 #import "NSFileManager+HPAdd.h"
+#import "UILabel+HPNight.h"
 #import "UITabBarItem+Night.h"
 
 FOUNDATION_EXPORT double HPThemeKitVersionNumber;

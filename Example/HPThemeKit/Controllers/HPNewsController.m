@@ -21,25 +21,24 @@
     // Do any additional setup after loading the view.
    // [self configTabBarItem];
     // Do any additional setup after loading the view.
-}
-- (void)configTabBarItem
-{
-    self.tabBarItem.title = @"课程";
-    self.tabBarItem.dk_imagePicker = HPImagePickerWithKey(tab_call_nor);
-     self.iv.dk_imagePicker = HPImagePickerWithKey(tab_call_nor);
-    self.tabBarItem.dk_selectedImagePicker = HPImagePickerWithKey(tab_call_press);
-    [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -2.5)];
-    self.tabBarItem.imageInsets = UIEdgeInsetsMake(-18.0, 0, 0.5, 0);
+    [self createAttLab];
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)createAttLab{
+    
+    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 200)];
+    lab.numberOfLines = 0;
+    [self.view addSubview:lab];
+    
+    NSString *str = @"白日依山建，黄河入天流，遇上千里马，宏章拨钱薄";
+    NSDictionary *dic = @{NSForegroundColorAttributeName : [UIColor redColor]};
+    NSRange rangeVoucher = [str rangeOfString:@"黄河入天流"];
+    NSMutableAttributedString *voucherAttiS = [[NSMutableAttributedString alloc] initWithString:str attributes:dic];
+     [voucherAttiS addAttribute:NSForegroundColorAttributeName value:[UIColor purpleColor] range:rangeVoucher];
+   
+    lab.attributedText = voucherAttiS;
+    
 }
-*/
 
 @end
