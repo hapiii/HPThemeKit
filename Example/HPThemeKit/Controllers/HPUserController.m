@@ -37,11 +37,11 @@
     img2.dk_imagePicker = HPImagePickerWithKey(chat_bottom_red_pack_press);
     [self.view addSubview:img2];
     
-    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(100, floor(CGRectGetMaxY(img2.frame)), 200, 50)];
-    lab.dk_tintColorPicker = HPColorPickerWithKey(kTableMenuTextColorSelected);
-    lab.dk_textColorPicker = HPColorPickerWithKey(kCommonBlueButtonTitleColorHighlighted);
-    lab.text = @"煮鱼不加香菜";
-    [self.view addSubview:lab];
+//    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(100, floor(CGRectGetMaxY(img2.frame)), 200, 50)];
+//    lab.dk_tintColorPicker = HPColorPickerWithKey(kTableMenuTextColorSelected);
+//    lab.dk_textColorPicker = HPColorPickerWithKey(kCommonBlueButtonTitleColorHighlighted);
+//    lab.text = @"煮鱼不加香菜";
+//    [self.view addSubview:lab];
   
 }
 

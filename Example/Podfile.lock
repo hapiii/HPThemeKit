@@ -15,9 +15,9 @@ PODS:
   - HPThemeKit (0.0.4):
     - DKNightVersion
     - SSZipArchive
-  - SDWebImage (4.4.4):
-    - SDWebImage/Core (= 4.4.4)
-  - SDWebImage/Core (4.4.4)
+  - SDWebImage (4.4.5):
+    - SDWebImage/Core (= 4.4.5)
+  - SDWebImage/Core (4.4.5)
   - SSZipArchive (2.1.4)
 
 DEPENDENCIES:
@@ -37,7 +37,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   DKNightVersion: eaa80cc4014b4bae7d4b535fd87ecc6a3c2767b3
   HPThemeKit: 2f4c30b6161f240d70be91a1a17e9b870deedc24
-  SDWebImage: c00ec18ab25d10e5ffac109b0f78d1b4341c9691
+  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
   SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
 
 PODFILE CHECKSUM: 68b7cee4b2fc15c041c2a86f773152d33999b47a

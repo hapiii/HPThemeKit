@@ -11,7 +11,6 @@
 #endif
 
 #import "HPThemeKit.h"
-#import "HPAttributedString.h"
 #import "HPColorTable.h"
 #import "HPImage.h"
 #import "HPThemeBundleHelper.h"

@@ -7,7 +7,7 @@
 //
 
 #import "HPNewsController.h"
-
+#import <HPThemeKit/UILabel+HPNight.h>
 
 @interface HPNewsController ()
 
@@ -30,7 +30,7 @@
     UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 200)];
     lab.numberOfLines = 0;
     [self.view addSubview:lab];
-    
+    /*
     NSString *str = @"白日依山建，黄河入天流，遇上千里马，宏章拨钱薄";
     NSDictionary *dic = @{NSForegroundColorAttributeName : [UIColor redColor]};
     NSRange rangeVoucher = [str rangeOfString:@"黄河入天流"];
@@ -38,7 +38,28 @@
      [voucherAttiS addAttribute:NSForegroundColorAttributeName value:[UIColor purpleColor] range:rangeVoucher];
    
     lab.attributedText = voucherAttiS;
+    lab.dk_attributedTextPicker = [[HPColorTable sharedColorTable] AttributePickerWithKey:@"kNavigationBarTitleColor"];
+    */
     
+    NSString *str = @"白日依山建，黄河入天流，遇上千里马，宏章拨钱薄";
+    NSDictionary *dic = @{NSForegroundColorAttributeName : [UIColor redColor]};
+   
+    NSMutableAttributedString *voucherAttiS = [[NSMutableAttributedString alloc] initWithString:str attributes:dic];
+    
+    [lab hp_addAttribute:voucherAttiS Range:[str rangeOfString:@"黄河入天流"] Key:@"kTabWithInPageTitleColorNormal"];
+//    void (^addAtr)(UILabel *lab,NSMutableAttributedString *attStr) = ^(UILabel *lab,NSMutableAttributedString *voucherAttiS){
+//
+//         NSRange rangeVoucher = [str rangeOfString:@"黄河入天流"];
+//         [voucherAttiS addAttribute:NSForegroundColorAttributeName value:[UIColor purpleColor] range:rangeVoucher];
+//        lab.attributedText = voucherAttiS;
+//        lab.dk_attributedTextPicker = [[HPColorTable sharedColorTable] AttributePickerWithKey:@"kNavigationBarTitleColor"];
+//
+//    };
+    
+//    addAtr(lab,voucherAttiS);
+    
+    
+   
 }
 
 @end
