@@ -36,6 +36,8 @@ HPThemeKit is available under the MIT license. See the LICENSE file for more inf
 
 ## Effect
 ![image](https://github.com/hapiii/HPThemeKit/blob/master/imgs/img1.gif)
+可以滑动的折线图
+![image](https://github.com/hapiii/HPThemeKit/blob/master/imgs/line.gif)
 
 #### 目前的问题：
 * 网络和下载部分做的比较糙，用AFN更好一点

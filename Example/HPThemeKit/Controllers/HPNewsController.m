@@ -8,7 +8,7 @@
 
 #import "HPNewsController.h"
 #import <HPThemeKit/UILabel+HPNight.h>
-
+#import "HPLineController.h"
 @interface HPNewsController ()
 
 @end
@@ -22,6 +22,8 @@
    // [self configTabBarItem];
     // Do any additional setup after loading the view.
     [self createAttLab];
+    
+    
 }
 
 
@@ -30,6 +32,13 @@
     UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 100, 200)];
     lab.numberOfLines = 0;
     [self.view addSubview:lab];
+    
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(100, 200, 100, 200)];
+    [btn setTitle:@"Line" forState:UIControlStateNormal];
+    [btn setBackgroundColor:[UIColor redColor]];
+    [btn addTarget:self action:@selector(goToLineView) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:btn];
     /*
     NSString *str = @"白日依山建，黄河入天流，遇上千里马，宏章拨钱薄";
     NSDictionary *dic = @{NSForegroundColorAttributeName : [UIColor redColor]};
@@ -46,7 +55,7 @@
    
     NSMutableAttributedString *voucherAttiS = [[NSMutableAttributedString alloc] initWithString:str attributes:dic];
     
-    [lab hp_addAttribute:voucherAttiS Range:[str rangeOfString:@"黄河入天流"] Key:@"kTabWithInPageTitleColorNormal"];
+//    [lab hp_addAttribute:voucherAttiS Range:[str rangeOfString:@"黄河入天流"] Key:@"kTabWithInPageTitleColorNormal"];
 //    void (^addAtr)(UILabel *lab,NSMutableAttributedString *attStr) = ^(UILabel *lab,NSMutableAttributedString *voucherAttiS){
 //
 //         NSRange rangeVoucher = [str rangeOfString:@"黄河入天流"];
@@ -58,8 +67,12 @@
     
 //    addAtr(lab,voucherAttiS);
     
-    
-   
+}
+
+- (void)goToLineView{
+    HPLineController *vc = [[HPLineController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

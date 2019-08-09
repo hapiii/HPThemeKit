@@ -5,6 +5,12 @@ platform :ios, '8.0'
 target 'HPThemeKit_Example' do
   pod 'HPThemeKit', :path => '../'
   pod 'SDWebImage'
+  pod 'HPTool'
+  pod 'Masonry'
+  pod 'YYKit'
+  pod 'LYEmptyView'
+  pod 'CTMediator'
+  
   target 'HPThemeKit_Tests' do
     inherit! :search_paths
 

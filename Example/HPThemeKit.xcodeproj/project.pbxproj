@@ -20,6 +20,10 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		B5FC8FEC22FD5584000E7B32 /* QFLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FC8FE622FD5581000E7B32 /* QFLineView.m */; };
+		B5FC8FED22FD5584000E7B32 /* QFLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FC8FE822FD5582000E7B32 /* QFLineModel.m */; };
+		B5FC8FEE22FD5584000E7B32 /* QFLineRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FC8FE922FD5583000E7B32 /* QFLineRowView.m */; };
+		B5FC8FF122FD55F2000E7B32 /* HPLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FC8FF022FD55F2000E7B32 /* HPLineController.m */; };
 		BFB480A221FE9B74003DF07B /* HPCardsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4809921FE9B74003DF07B /* HPCardsController.m */; };
 		BFB480A321FE9B74003DF07B /* HPUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4809B21FE9B74003DF07B /* HPUserController.m */; };
 		BFB480A421FE9B74003DF07B /* HPNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4809C21FE9B74003DF07B /* HPNewsController.m */; };
@@ -67,6 +71,14 @@
 		71AEF1C5048344C95F3CD7B4 /* Pods_HPThemeKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HPThemeKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76FA3C8BA40B0F7668D1AA98 /* Pods-HPThemeKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPThemeKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HPThemeKit_Tests/Pods-HPThemeKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1D52941EEB1756FB364DCDD /* Pods-HPThemeKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HPThemeKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HPThemeKit_Example/Pods-HPThemeKit_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B5FC8FE622FD5581000E7B32 /* QFLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFLineView.m; sourceTree = "<group>"; };
+		B5FC8FE722FD5582000E7B32 /* QFLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFLineModel.h; sourceTree = "<group>"; };
+		B5FC8FE822FD5582000E7B32 /* QFLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFLineModel.m; sourceTree = "<group>"; };
+		B5FC8FE922FD5583000E7B32 /* QFLineRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFLineRowView.m; sourceTree = "<group>"; };
+		B5FC8FEA22FD5583000E7B32 /* QFLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFLineView.h; sourceTree = "<group>"; };
+		B5FC8FEB22FD5584000E7B32 /* QFLineRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFLineRowView.h; sourceTree = "<group>"; };
+		B5FC8FEF22FD55F2000E7B32 /* HPLineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPLineController.h; sourceTree = "<group>"; };
+		B5FC8FF022FD55F2000E7B32 /* HPLineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPLineController.m; sourceTree = "<group>"; };
 		BFB4809821FE9B74003DF07B /* HPHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPHomeController.h; sourceTree = "<group>"; };
 		BFB4809921FE9B74003DF07B /* HPCardsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPCardsController.m; sourceTree = "<group>"; };
 		BFB4809A21FE9B74003DF07B /* HPThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPThemeController.h; sourceTree = "<group>"; };
@@ -216,23 +228,39 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B5FC8FE522FD5564000E7B32 /* LineView */ = {
+			isa = PBXGroup;
+			children = (
+				B5FC8FE722FD5582000E7B32 /* QFLineModel.h */,
+				B5FC8FE822FD5582000E7B32 /* QFLineModel.m */,
+				B5FC8FEB22FD5584000E7B32 /* QFLineRowView.h */,
+				B5FC8FE922FD5583000E7B32 /* QFLineRowView.m */,
+				B5FC8FEA22FD5583000E7B32 /* QFLineView.h */,
+				B5FC8FE622FD5581000E7B32 /* QFLineView.m */,
+				B5FC8FEF22FD55F2000E7B32 /* HPLineController.h */,
+				B5FC8FF022FD55F2000E7B32 /* HPLineController.m */,
+			);
+			path = LineView;
+			sourceTree = "<group>";
+		};
 		BFB4809721FE9B74003DF07B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B5FC8FE522FD5564000E7B32 /* LineView */,
 				BFB480A721FE9C30003DF07B /* HPBaseController.h */,
 				BFB480A821FE9C30003DF07B /* HPBaseController.m */,
-				BFB480BE21FF0A1C003DF07B /* HPTabbarController.h */,
-				BFB480BF21FF0A1C003DF07B /* HPTabbarController.m */,
+				BFB4809E21FE9B74003DF07B /* HPCardsController.h */,
+				BFB4809921FE9B74003DF07B /* HPCardsController.m */,
 				BFB4809821FE9B74003DF07B /* HPHomeController.h */,
 				BFB4809F21FE9B74003DF07B /* HPHomeController.m */,
-				BFB4809921FE9B74003DF07B /* HPCardsController.m */,
+				BFB480A021FE9B74003DF07B /* HPNewsController.h */,
+				BFB4809C21FE9B74003DF07B /* HPNewsController.m */,
+				BFB480BE21FF0A1C003DF07B /* HPTabbarController.h */,
+				BFB480BF21FF0A1C003DF07B /* HPTabbarController.m */,
 				BFB4809A21FE9B74003DF07B /* HPThemeController.h */,
 				BFB4809D21FE9B74003DF07B /* HPThemeController.m */,
-				BFB4809B21FE9B74003DF07B /* HPUserController.m */,
-				BFB4809C21FE9B74003DF07B /* HPNewsController.m */,
-				BFB4809E21FE9B74003DF07B /* HPCardsController.h */,
-				BFB480A021FE9B74003DF07B /* HPNewsController.h */,
 				BFB480A121FE9B74003DF07B /* HPUserController.h */,
+				BFB4809B21FE9B74003DF07B /* HPUserController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -308,6 +336,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -397,24 +426,34 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HPThemeKit_Example/Pods-HPThemeKit_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-HPThemeKit_Example/Pods-HPThemeKit_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
 				"${BUILT_PRODUCTS_DIR}/DKNightVersion/DKNightVersion.framework",
 				"${BUILT_PRODUCTS_DIR}/HPThemeKit/HPThemeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/HPTool/HPTool.framework",
+				"${BUILT_PRODUCTS_DIR}/LYEmptyView/LYEmptyView.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKNightVersion.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPThemeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HPTool.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LYEmptyView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HPThemeKit_Example/Pods-HPThemeKit_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HPThemeKit_Example/Pods-HPThemeKit_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -424,6 +463,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5FC8FED22FD5584000E7B32 /* QFLineModel.m in Sources */,
+				B5FC8FEC22FD5584000E7B32 /* QFLineView.m in Sources */,
 				BFB480A421FE9B74003DF07B /* HPNewsController.m in Sources */,
 				BFB480A521FE9B74003DF07B /* HPThemeController.m in Sources */,
 				BFB480A621FE9B74003DF07B /* HPHomeController.m in Sources */,
@@ -434,6 +475,8 @@
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				BFB480A221FE9B74003DF07B /* HPCardsController.m in Sources */,
 				BFB480C021FF0A1C003DF07B /* HPTabbarController.m in Sources */,
+				B5FC8FEE22FD5584000E7B32 /* QFLineRowView.m in Sources */,
+				B5FC8FF122FD55F2000E7B32 /* HPLineController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,9 +12,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HPThemeCell : UICollectionViewCell
+
 @property (weak, nonatomic) IBOutlet UIImageView *themeImage;
 @property (weak, nonatomic) IBOutlet UILabel *themeTitle;
 @property(nonatomic,strong)HPThemeModel *theme;
+
 @end
 
 NS_ASSUME_NONNULL_END
