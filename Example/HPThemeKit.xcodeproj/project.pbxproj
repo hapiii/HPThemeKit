@@ -22,7 +22,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		B5FC8FEC22FD5584000E7B32 /* QFLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FC8FE622FD5581000E7B32 /* QFLineView.m */; };
 		B5FC8FED22FD5584000E7B32 /* QFLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FC8FE822FD5582000E7B32 /* QFLineModel.m */; };
-		B5FC8FEE22FD5584000E7B32 /* QFLineRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FC8FE922FD5583000E7B32 /* QFLineRowView.m */; };
 		B5FC8FF122FD55F2000E7B32 /* HPLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FC8FF022FD55F2000E7B32 /* HPLineController.m */; };
 		BFB480A221FE9B74003DF07B /* HPCardsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4809921FE9B74003DF07B /* HPCardsController.m */; };
 		BFB480A321FE9B74003DF07B /* HPUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB4809B21FE9B74003DF07B /* HPUserController.m */; };
@@ -74,9 +73,7 @@
 		B5FC8FE622FD5581000E7B32 /* QFLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFLineView.m; sourceTree = "<group>"; };
 		B5FC8FE722FD5582000E7B32 /* QFLineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFLineModel.h; sourceTree = "<group>"; };
 		B5FC8FE822FD5582000E7B32 /* QFLineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFLineModel.m; sourceTree = "<group>"; };
-		B5FC8FE922FD5583000E7B32 /* QFLineRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QFLineRowView.m; sourceTree = "<group>"; };
 		B5FC8FEA22FD5583000E7B32 /* QFLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFLineView.h; sourceTree = "<group>"; };
-		B5FC8FEB22FD5584000E7B32 /* QFLineRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QFLineRowView.h; sourceTree = "<group>"; };
 		B5FC8FEF22FD55F2000E7B32 /* HPLineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPLineController.h; sourceTree = "<group>"; };
 		B5FC8FF022FD55F2000E7B32 /* HPLineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPLineController.m; sourceTree = "<group>"; };
 		BFB4809821FE9B74003DF07B /* HPHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPHomeController.h; sourceTree = "<group>"; };
@@ -233,8 +230,6 @@
 			children = (
 				B5FC8FE722FD5582000E7B32 /* QFLineModel.h */,
 				B5FC8FE822FD5582000E7B32 /* QFLineModel.m */,
-				B5FC8FEB22FD5584000E7B32 /* QFLineRowView.h */,
-				B5FC8FE922FD5583000E7B32 /* QFLineRowView.m */,
 				B5FC8FEA22FD5583000E7B32 /* QFLineView.h */,
 				B5FC8FE622FD5581000E7B32 /* QFLineView.m */,
 				B5FC8FEF22FD55F2000E7B32 /* HPLineController.h */,
@@ -475,7 +470,6 @@
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				BFB480A221FE9B74003DF07B /* HPCardsController.m in Sources */,
 				BFB480C021FF0A1C003DF07B /* HPTabbarController.m in Sources */,
-				B5FC8FEE22FD5584000E7B32 /* QFLineRowView.m in Sources */,
 				B5FC8FF122FD55F2000E7B32 /* HPLineController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

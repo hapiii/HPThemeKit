@@ -8,8 +8,6 @@
 
 #import "QFLineView.h"
 #import "QFLineModel.h"
-#import <YYKit/UIView+YYAdd.h>
-#import "QFLineRowView.h"
 
 @interface QFLineView ()
 
@@ -27,10 +25,10 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     
     if (self = [super initWithFrame:frame]) {
-          _rowWidth = frame.size.width/7.0f;
+        _rowWidth = frame.size.width/7.0f;
         _lineHeight = frame.size.height -35;
-         [self configUI];
-
+        [self configUI];
+        
     }
     return self;
 }
@@ -38,7 +36,7 @@
 - (void)configUI{
     
     self.showsHorizontalScrollIndicator = NO;
-   
+    
     [self setBackgroundColor:[UIColor whiteColor]];
     
     [self addSubview:self.tipLabel];
@@ -61,7 +59,7 @@
     if (remainder>=_rowWidth/2) {
         row++;
     }
-   
+    
     CGPoint point = CGPointMake(_rowWidth/2+_rowWidth*row, _lineHeight*(1-[_dataArr[row].pointHeight floatValue]/_maxHeight));
     self.tipLabel.text = [NSString stringWithFormat:@"学习了%@小时",_dataArr[row].pointHeight];
     self.tipLabel.textAlignment = NSTextAlignmentCenter;
@@ -86,15 +84,47 @@
     }
     
     self.contentSize = CGSizeMake(dataArr.count*_rowWidth, self.frame.size.height);
-   
+    
+    UIBezierPath *path=[UIBezierPath bezierPath];
+    CAShapeLayer *layer=[CAShapeLayer layer];
+    
+    CGPoint prePoint;
+    CGPoint nowPoint;
+    
     for (int i = 0; i<dataArr.count; i++) {
         
         [self configLineUIWithIndex:i];
+        
+        CGPoint point = CGPointMake(_rowWidth/2+_rowWidth*i, _lineHeight*(1-[_dataArr[i].pointHeight floatValue]/_maxHeight));
+        if (i == 0) {
+            prePoint = point;
+            [path moveToPoint:prePoint];
+        }else{
+            
+            nowPoint = point;
+            
+            [path addCurveToPoint:nowPoint controlPoint1:CGPointMake((prePoint.x+nowPoint.x)/2.0, prePoint.y) controlPoint2:CGPointMake((prePoint.x+nowPoint.x)/2.0, nowPoint.y)];
+            
+            prePoint=nowPoint;
+        }
     }
+    layer.path = path.CGPath;
+    layer.strokeColor = [UIColor colorWithRed:233/255.0f green:78/255.0f blue:92/255.0f alpha:1].CGColor;
+    layer.fillColor = [UIColor clearColor].CGColor;
+    layer.lineWidth = 3;
     
+    CABasicAnimation *animation=[CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    animation.fromValue=@(0);
+    animation.toValue=@(1);
+    animation.duration=6;
+    [layer addAnimation:animation forKey:nil];
+    animation.fillMode=kCAFillModeForwards;
+    animation.removedOnCompletion=NO;
+    
+    [self.layer addSublayer:layer];
     [self addSubview:self.tipLabel];
     [self bringSubviewToFront:self.tipLabel];
-   
+    
 }
 
 ///获取Y轴最高点
@@ -112,8 +142,8 @@
 ///ROW UI
 - (void)configLineUIWithIndex:(NSInteger)i{
     
-     QFLineModel *model = _dataArr[i];
-   
+    QFLineModel *model = _dataArr[i];
+    
     CGPoint point = CGPointMake(_rowWidth/2+_rowWidth*i, _lineHeight*(1-[_dataArr[i].pointHeight floatValue]/_maxHeight));
     
     //线
@@ -121,15 +151,6 @@
     line.frame = CGRectMake(point.x, 10, 0.55,_lineHeight);
     line.backgroundColor = [UIColor lightGrayColor].CGColor;
     
-    if (i<_dataArr.count-1) {//折线Line
-        
-        CGPoint endPoint = CGPointMake(_rowWidth/2+_rowWidth*i, _lineHeight*(1-[_dataArr[i+1].pointHeight floatValue]/_maxHeight));
-        
-        QFLineRowView *view = [[QFLineRowView alloc] initWithFrame:CGRectMake(point.x, 0,_rowWidth , line.frame.size.height) headPoint:point endPoint:endPoint];
-        [self addSubview:view];
-        
-    }
-   
     //X轴文字
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 15)];
     label.text = model.pointTime;
@@ -139,7 +160,7 @@
     //点
     UIView *pointView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 5, 5)];
     pointView.center = point;
-    pointView.backgroundColor = [UIColor redColor];
+    pointView.backgroundColor = [UIColor colorWithRed:233/255.0f green:78/255.0f blue:92/255.0f alpha:1];
     
     [self addSubview:label];
     [self.layer addSublayer:line];

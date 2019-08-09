@@ -21,6 +21,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor grayColor];
     
+    [self.iv removeFromSuperview];
     [self loadData];
     
     [self setupUI];
